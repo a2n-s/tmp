@@ -1,6 +1,6 @@
 {
     "audio": "pipewire",
-    "bootloader": "grub_install",
+    "bootloader": "grub-install",
     "config_version": "0.0.1",
     "debug": false,
     "desktop-environment": "qtile",
@@ -20,7 +20,7 @@
     },
     "mount_point": null,
     "nic": {
-        "type": "NM"
+        "type": "nm"
     },
     "ntp": true,
     "packages": [
