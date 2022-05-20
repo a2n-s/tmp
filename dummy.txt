@@ -6,3 +6,4 @@ rebase merging
 rebase merging
 squash merging
 squash merging
+squash merging
