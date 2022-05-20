@@ -4,3 +4,6 @@ merge commits
 rebase merging
 rebase merging
 rebase merging
+squash merging
+squash merging
+squash merging
