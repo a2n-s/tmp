@@ -3,3 +3,4 @@ merge commits
 merge commits
 rebase merging
 rebase merging
+rebase merging
