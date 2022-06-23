@@ -1,5 +1,5 @@
 ---
-name: 📝 Bug Report
+name: 📝 foo
 description: Report something that isn't working as intended
 labels: ["bug", "invalid"]
 body:
