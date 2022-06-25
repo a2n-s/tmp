@@ -20,6 +20,7 @@ jobs:
         SHELLCHECK_OPTS: -e SC2059 -e SC2034 -e SC1090 -e SC2154
       with:
         scandir: './scripts/bash'
+        additional_files: 'error.sh'
         ignore_paths: ignoreme ignoremetoo
         ignore_names: ignorable.sh
         severity: warning
