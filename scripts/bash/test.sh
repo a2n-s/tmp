@@ -2,5 +2,5 @@
 
 echo "all good in there"
 
-var
-echo $var
+var="hi"
+echo "$var"
