@@ -17,7 +17,7 @@ jobs:
     - name: Run shellcheck
       uses: ludeeus/action-shellcheck@master
       env:
-        SHELLCHECK_OPTS: -e SC2059 -e SC2034 -e SC1090
+        SHELLCHECK_OPTS: -e SC2059 -e SC2034 -e SC1090 -e SC2154
       with:
         scandir: './scripts/bash'
         ignore_paths: ignoreme ignoremetoo
