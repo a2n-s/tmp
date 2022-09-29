@@ -27,7 +27,7 @@ b) **Sensor structure & operation**: Indicate which structure
 >   length (see https://www.researchgate.net/profile/Malgorzata_Perz/publication/265155524/figure/download/fig7/AS:295878502961157@1447554340422/Normalized-spectral-sensitivity-of-retinal-rod-and-cone-cells.png).
 >   Cones can then be split into three distinct families of sensors:
 >   "mostly blue" cones, "mostly green" cones and "mostly red" cones.
-> <img title="spectra" src="https://www.researchgate.net/profile/Malgorzata_Perz/publication/265155524/figure/download/fig7/AS:295878502961157@1447554340422/Normalized-spectral-sensitivity-of-retinal-rod-and-cone-cells.png">
+> <img title="spectra" src="https://visionupgrades.com/wp-content/uploads/2019/02/cone-absorption-spectra-1024x760.png">
 >
 >  - the rods: these cells are not sensitive to colors but very
 >   good at detecting light intensity. This capabilities is
