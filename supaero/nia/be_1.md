@@ -137,7 +137,45 @@ to use them in your report.
 > for motion detection and processing is located in the dorsal
 > stream, at the back of the brain, between the occipital and
 > the parietal lobes.
+>
+> See `visual.fig` for the results of my instance of the
+> experiment.
+>
+> During the experiment, a bunch of dots are moving on the screen.
+> They exhibit different levels of coherence, i.e. the dots move
+> more or less in the same direction.
+> Then the goal of the experiment is to determine the direction
+> of the global crowd of points.
+>
+> The interesting thing about this experience is that the crowd
+> never truely moves in one direction.
+> But a few dots moving coherently are enough to force us humans
+> in perceiving a global movement.
 
 e) **Example**: Find and briefly detail an example of a visual
     dysfunction or visual process in the aeronautical or
     transportation domains.
+
+A classical visual dysfunction in the aeronautics domain is
+night landing.
+When landing during night, there are lights on the ground that
+indicate the landing runway.
+However, in the darkness and without any further information
+about the ground, pilots have a lot of trouble determining the
+slope of their trajectory.
+
+This is one of the many reason why there are many much more
+absolute measurements and indicators in the cockpits.
+
+
+
+One auditory dysfunction, especially problematic in the field
+of aeronautics, is "inattention deafness".
+
+When focusing strongly on a precise visual task -let's say looking at
+the board and piloting!- someone could simply NOT here what is
+around.
+
+For instance, if a pilot focuses too much on the board or on the
+outside of the cockpit, he can completely forget to hear alarm
+signals, which can be very inconvenient...
