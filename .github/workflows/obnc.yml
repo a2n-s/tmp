@@ -20,8 +20,9 @@ jobs:
 
       - name: Add experimental
         run: |
-          echo "deb http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" > /etc/apt/sources.list.d/experimental.list
-          echo "deb-src http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" >> /etc/apt/sources.list.d/experimental.list
+          echo "deb http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" | sudo tee /etc/apt/sources.list.d/experimental.list
+          echo "deb-src http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" | sudo tee --append /etc/apt/sources.list.d/experimental.list
+          cat /etc/apt/sources.list.d/experimental.list
 
       - name: Install the dependencies
         run: |
