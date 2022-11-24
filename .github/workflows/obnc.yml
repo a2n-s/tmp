@@ -21,6 +21,9 @@ jobs:
       - name: Install the dependencies
         run: sudo apt install libgc-dev libsdl1.2-dev llc
 
+      - name: Check the dependencies
+        run: llc --version
+
       - name: Install the transpiler
         run: |
           cd obnc
