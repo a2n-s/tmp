@@ -25,13 +25,16 @@ jobs:
           sudo apt install llvm
 
       - name: Check the dependencies
-        run: llc --version
+        run: |
+          gcc --version
+          llc --version
 
       - name: Build llvm from source
         run: |
           git clone https://github.com/llvm/llvm-project.git
           cd llvm-project
-          cmake -S llvm -B build
+          cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=release
+          make install
 
       - name: Install the transpiler
         run: |
