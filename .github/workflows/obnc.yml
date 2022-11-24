@@ -19,11 +19,11 @@ jobs:
         run: git clone https://github.com/oberonproject/obnc.git
 
       - name: Install the dependencies
-        run: apt install libgc-dev libsdl1.2-dev
+        run: sudo apt install libgc-dev libsdl1.2-dev
 
       - name: Install the transpiler
         run: |
           cd obnc
           ./build
-          ./install
+          sudo ./install
           obnc -v
