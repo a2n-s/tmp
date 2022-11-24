@@ -28,6 +28,9 @@ jobs:
           cd obnc
           pwd
           ls
+          git checkout dev
+          pwd
+          ls
           ./build
           sudo ./install
           obnc -v
