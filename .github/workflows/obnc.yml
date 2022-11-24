@@ -19,7 +19,9 @@ jobs:
         run: git clone https://github.com/oberonproject/obnc.git
 
       - name: Install the dependencies
-        run: sudo apt install libgc-dev libsdl1.2-dev llvm-14-dev
+        run: |
+          sudo apt install libgc-dev libsdl1.2-dev libllvm-14-ocaml-dev
+          sudo apt install libllvm14 llvm-14 llvm-14-dev llvm-14-doc llvm-14-examples llvm-14-runtime
 
       - name: Check the dependencies
         run: llc --version
