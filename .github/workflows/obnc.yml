@@ -21,16 +21,13 @@ jobs:
       - name: Install the dependencies
         run: sudo apt install libgc-dev libsdl1.2-dev
 
+      - name: Checkout to the source
+        run: |
+          cd obnc
+          git checkout dev
+
       - name: Install the transpiler
         run: |
-          pwd
-          ls
-          cd obnc
-          pwd
-          ls
-          git checkout dev
-          pwd
-          ls
           ./build
           sudo ./install
           obnc -v
