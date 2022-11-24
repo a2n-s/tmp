@@ -18,19 +18,20 @@ jobs:
       - name: Clone the source
         run: git clone https://github.com/oberonproject/obnc.git
 
-      - name: Add experimental
-        run: |
-          echo "deb http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" | sudo tee /etc/apt/sources.list.d/experimental.list
-          echo "deb-src http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" | sudo tee --append /etc/apt/sources.list.d/experimental.list
-          cat /etc/apt/sources.list.d/experimental.list
-
       - name: Install the dependencies
         run: |
           sudo apt install libgc-dev libsdl1.2-dev libllvm-14-ocaml-dev
-          sudo apt install llvm=15.0-56~exp1
+          sudo apt install cmake
+          sudo apt install llvm
 
       - name: Check the dependencies
         run: llc --version
+
+      - name: Build llvm from source
+        run: |
+          git clone https://github.com/llvm/llvm-project.git
+          cd llvm-project
+          cmake -S llvm -B build
 
       - name: Install the transpiler
         run: |
