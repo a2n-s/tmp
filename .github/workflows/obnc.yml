@@ -21,8 +21,7 @@ jobs:
       - name: Install the dependencies
         run: |
           sudo apt install libgc-dev libsdl1.2-dev libllvm-14-ocaml-dev
-          sudo apt install libllvm14 llvm-14 llvm-14-dev llvm-14-doc llvm-14-examples llvm-14-runtime
-          sudo apt install llvm=14.0.6
+          sudo apt install llvm=15.0-56~exp1
 
       - name: Check the dependencies
         run: llc --version
