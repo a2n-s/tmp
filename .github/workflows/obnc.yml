@@ -18,6 +18,11 @@ jobs:
       - name: Clone the source
         run: git clone https://github.com/oberonproject/obnc.git
 
+      - name: Add experimental
+        run: |
+          echo "deb http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" > /etc/apt/sources.list.d/experimental.list
+          echo "deb-src http://ftp2.fr.debian.org/debian/ experimental main contrib non-free" >> /etc/apt/sources.list.d/experimental.list
+
       - name: Install the dependencies
         run: |
           sudo apt install libgc-dev libsdl1.2-dev libllvm-14-ocaml-dev
