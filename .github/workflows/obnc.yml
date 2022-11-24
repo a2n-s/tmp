@@ -23,7 +23,11 @@ jobs:
 
       - name: Install the transpiler
         run: |
+          pwd
+          ls
           cd obnc
+          pwd
+          ls
           ./build
           sudo ./install
           obnc -v
