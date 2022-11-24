@@ -30,3 +30,6 @@ jobs:
 
       - name: Check the installation
         run: obnc -v
+
+      - name: Run a foo makefile target
+        run: make foo
