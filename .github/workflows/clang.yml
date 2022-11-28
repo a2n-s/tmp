@@ -1,0 +1,27 @@
+name: Install clang
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install clang
+        run: |
+          sudo apt install clang
+
+      - name: Check clang
+        run: |
+          clang --version
+
+      - name: Run a foo makefile target
+        run: make foo
