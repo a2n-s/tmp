@@ -32,5 +32,7 @@ jobs:
       - name: Check the installation
         run: |
           ls ~/.local/share
+          ls ~/.local/share/clang-15
+          ls ~/.local/share/clang-15/bin
           ~/.local/share/clang-15/bin/clang --version
 
