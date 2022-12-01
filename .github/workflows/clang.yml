@@ -21,18 +21,11 @@ jobs:
       - name: Extract the archive
         run: tar xvf /tmp/clang-15.tar.xz --directory /tmp/
 
-      - name: Check archive
-        run: ls /tmp/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04/
-
       - name: Install the binaries
         run: |
           mkdir -p ~/.local/share/clang-15/
           cp -rv /tmp/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04/* ~/.local/share/clang-15/
 
       - name: Check the installation
-        run: |
-          ls ~/.local/share
-          ls ~/.local/share/clang-15
-          ls ~/.local/share/clang-15/bin
-          ~/.local/share/clang-15/bin/clang --version
+        run: ~/.local/share/clang-15/bin/clang --version
 
