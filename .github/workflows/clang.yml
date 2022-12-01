@@ -1,4 +1,4 @@
-name: Install clang
+name: Install pre-compiled clang-15
 
 on:
   push:
@@ -15,13 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install clang
+      - name: Install clang-15
         run: |
-          sudo apt install clang
+          curl -fLo /tmp/clang-15.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+          mkdir -p ~/.local/share/clang-15/
+          tar xvf /tmp/clang-15.tar.xz ~/.local/share/clang-15
 
-      - name: Check clang
-        run: |
-          clang --version
+      - name: Check the installation
+        run: ~/.local/share/clang-15/bin/clang --version
 
-      - name: Run a foo makefile target
-        run: make foo
