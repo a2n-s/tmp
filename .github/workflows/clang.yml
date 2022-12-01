@@ -27,7 +27,7 @@ jobs:
       - name: Install the binaries
         run: |
           mkdir -p ~/.local/share/clang-15/
-          cp -rv /tmp/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04/ ~/.local/share/clang-15/
+          cp -rv /tmp/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04/* ~/.local/share/clang-15/
 
       - name: Check the installation
         run: |
