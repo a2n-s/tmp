@@ -18,8 +18,9 @@ jobs:
       - name: Install clang-15
         run: |
           curl -fLo /tmp/clang-15.tar.xz https://github.com/llvm/llvm-project/releases/download/llvmorg-15.0.5/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+          tar xvf /tmp/clang-15.tar.xz /tmp/
           mkdir -p ~/.local/share/clang-15/
-          tar xvf /tmp/clang-15.tar.xz ~/.local/share/clang-15
+          cp /tmp/clang+llvm-15.0.5-x86_64-linux-gnu-ubuntu-18.04/ ~/.local/share/clang-15/
 
       - name: Check the installation
         run: ~/.local/share/clang-15/bin/clang --version
