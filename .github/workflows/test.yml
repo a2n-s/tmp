@@ -21,5 +21,8 @@ jobs:
       - name: Add the dummy command
         run: echo "alias dummy=\"echo 'this is dummy'\"" >> ~/.bashrc
 
+      - name: See the content of `bashrc`
+        run: cat ~/.bashrc | tail
+
       - name: Check dummy command
         run: dummy
