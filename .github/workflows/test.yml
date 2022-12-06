@@ -23,3 +23,8 @@ jobs:
 
       - name: Run a script with full path
         run: ~/work/tests/tests/my_script.sh "hello absolute"
+
+      - name: Run a script with an exported path
+        run: |
+          export PATH="~/work/tests/tests/my_script.sh:$PATH"
+          my_script.sh "hello export"
