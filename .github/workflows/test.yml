@@ -37,5 +37,9 @@ jobs:
       #     export PATH="~/work/tests/tests/:$PATH"
       #     make script
 
+      - name: Run a script from a makefile rule from environment
+        run: |
+          export PATH="~/work/tests/tests/:$PATH"
+          make --environment-overrides script
       - name: Run a script from a makefile rule by giving PATH
         run: make PATH="~/work/tests/tests/:$PATH" script
