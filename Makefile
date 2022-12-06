@@ -6,4 +6,6 @@ foo:
 
 
 script:
+	@echo "script: $(SCRIPT)"
+	@echo "PATH: $(PATH)"
 	$(SCRIPT) "hello makefile"
