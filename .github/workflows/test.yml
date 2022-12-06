@@ -36,3 +36,6 @@ jobs:
         run: |
           export PATH="~/work/tests/tests/:$PATH"
           make script
+
+      - name: Run a script from a makefile rule by giving PATH
+        run: make PATH="~/work/tests/tests/:$PATH" script
