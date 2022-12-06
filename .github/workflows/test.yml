@@ -15,14 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: See the content of `bashrc`
-        run: cat ~/.bashrc
+      - name: See current directory
+        run: pwd
 
-      - name: Add the dummy command
-        run: echo "alias dummy=\"echo 'this is dummy'\"" >> ~/.bashrc
-
-      - name: See the content of `bashrc`
-        run: cat ~/.bashrc | tail
-
-      - name: Check dummy command
-        run: dummy
+      - name: Run a script
+        run: my_script "hello"
