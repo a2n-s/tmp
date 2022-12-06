@@ -26,5 +26,5 @@ jobs:
 
       - name: Run a script with an exported path
         run: |
-          export PATH="~/work/tests/tests/my_script.sh:$PATH"
+          export PATH="~/work/tests/tests/:$PATH"
           my_script.sh "hello export"
