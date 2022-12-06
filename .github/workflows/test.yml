@@ -19,4 +19,7 @@ jobs:
         run: pwd
 
       - name: Run a script with full path
+        run: ./my_script "hello relative"
+
+      - name: Run a script with full path
         run: ~/work/tests/tests/my_script "hello absolute"
