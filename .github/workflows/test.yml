@@ -28,3 +28,6 @@ jobs:
         run: |
           export PATH="~/work/tests/tests/:$PATH"
           my_script.sh "hello export"
+
+      - name: Run a script from a makefile rule
+        run: make script
