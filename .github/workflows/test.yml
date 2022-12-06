@@ -30,7 +30,7 @@ jobs:
           my_script.sh "hello export"
 
       - name: Run a script from a makefile rule by specifying the path
-          make SCRIPT=~/work/tests/tests/my_script.sh script
+        run: make SCRIPT=~/work/tests/tests/my_script.sh script
 
       - name: Run a script from a makefile rule with exported path
         run: |
