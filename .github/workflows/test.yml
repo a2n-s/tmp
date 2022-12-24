@@ -9,7 +9,14 @@ on:
   workflow_dispatch:
 
 env:
+  EMOJI: ":wave:"
   VAR: "hellorld :wave:"
+  VAR1: "hellorld $EMOJI"
+  VAR2: "hellorld ${EMOJI}"
+  VAR3: 'hellorld $EMOJI'
+  VAR4: 'hellorld ${EMOJI}'
+  VAR5: hellorld $EMOJI
+  VAR6: hellorld ${EMOJI}
 
 jobs:
   build:
@@ -19,4 +26,12 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Show the VAR
-        run: echo "VAR = '$VAR'"
+        run: |
+          echo "EMOJI: $EMOJI"
+          echo "VAR: '$VAR'"
+          echo "VAR1: '$VAR1'"
+          echo "VAR2: '$VAR2'"
+          echo "VAR3: '$VAR3'"
+          echo "VAR4: '$VAR4'"
+          echo "VAR5: '$VAR5'"
+          echo "VAR6: '$VAR6'"
