@@ -23,9 +23,9 @@ jobs:
     runs-on: ubuntu-22.04
 
     env:
-      VAR7: hellorld ${{env.EMOJI}}
-      VAR8: 'hellorld ${{env.EMOJI}}'
-      VAR9: "hellorld ${{env.EMOJI}}"
+      VAR7: hellorld ${{ env.EMOJI }}
+      VAR8: 'hellorld ${{ env.EMOJI }}'
+      VAR9: "hellorld ${{ env.EMOJI }}"
 
     steps:
       - uses: actions/checkout@v3
