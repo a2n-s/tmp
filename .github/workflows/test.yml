@@ -8,6 +8,9 @@ on:
 
   workflow_dispatch:
 
+env:
+  VAR: "hellorld :wave:"
+
 jobs:
   build:
     runs-on: ubuntu-22.04
@@ -15,48 +18,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: See current directory
-        run: pwd
-
-      - name: Run a script with full path
-        run: ./my_script.sh "hello relative"
-
-      - name: Run a script with full path
-        run: ~/work/tests/tests/my_script.sh "hello absolute"
-
-      - name: Run a script with an exported path
-        run: |
-          export PATH="~/work/tests/tests/:$PATH"
-          my_script.sh "hello export"
-
-      - name: Run a script from a makefile rule by specifying the path
-        run: make SCRIPT=~/work/tests/tests/my_script.sh script
-
-      # - name: Run a script from a makefile rule with exported path
-      #   run: |
-      #     export PATH="~/work/tests/tests/:$PATH"
-      #     make script
-
-      - name: Run a script from a makefile rule from environment
-        run: |
-          export PATH="/home/runner/work/tests/tests/:$PATH"
-          make --environment-overrides script
-
-      - name: Run a script from a makefile rule by giving PATH
-        run: make PATH="/home/runner/work/tests/tests/:$PATH" script
-
-      - name: Run a script from a makefile rule from environment with HOME
-        run: |
-          export PATH="$HOME/work/tests/tests/:$PATH"
-          make --environment-overrides script
-
-      - name: Run a script from a makefile rule by giving PATH with HOME
-        run: make PATH="$HOME/work/tests/tests/:$PATH" script
-
-      - name: Run a script from a makefile rule from environment
-        run: |
-          export PATH="~/work/tests/tests/:$PATH"
-          make --environment-overrides script
-
-      - name: Run a script from a makefile rule by giving PATH
-        run: make PATH="~/work/tests/tests/:$PATH" script
+      - name: Show the VAR
+        run: echo "VAR: '$VAR'"
