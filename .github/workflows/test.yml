@@ -23,7 +23,6 @@ jobs:
     runs-on: ubuntu-22.04
 
     env:
-      VAR7: hellorld ${{ env.EMOJI }}
       VAR8: 'hellorld ${{ env.EMOJI }}'
       VAR9: "hellorld ${{ env.EMOJI }}"
 
@@ -40,6 +39,5 @@ jobs:
           echo "VAR4: '$VAR4'"
           echo "VAR5: '$VAR5'"
           echo "VAR6: '$VAR6'"
-          echo "VAR7: '$VAR7'"
           echo "VAR8: '$VAR8'"
           echo "VAR9: '$VAR9'"
