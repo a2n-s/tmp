@@ -5,13 +5,13 @@ this is normal text
 
 this is another paragraph
 
-> **Note**
+> **Note**  
 > this is a note
 
 a last paragraph
 
-> **Note**
+> **Note**  
 > this is another note
 
-> **Warning**
+> **Warning**  
 > this is a warning
