@@ -9,6 +9,20 @@ on:
   workflow_dispatch:
 
 jobs:
+  xclip:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install xclip
+        run: sudo apt install -y xclip
+
+      - name: try to clip
+        run: |
+          DISPLAY=':0'
+          echo "bar" | xclip -sel clip
+
   build:
     runs-on: ubuntu-22.04
 
