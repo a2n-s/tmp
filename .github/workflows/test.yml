@@ -20,7 +20,7 @@ jobs:
 
       - name: try to clip
         run: |
-          DISPLAY=':0'
+          export DISPLAY=':0'
           echo "bar" | xclip -sel clip
 
   build:
