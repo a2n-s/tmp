@@ -1,0 +1,25 @@
+name: nu
+
+on:
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: nu {0}
+
+jobs:
+  basic-usage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: hustcer/setup-nu@main
+      with:
+        version: '*'
+    - run: version; $"(char nl)Dir contents:(char nl)"; ls ((which nu).path.0 | path dirname)
+    - run: |
+        print $'Current env:(char nl)'
+        print $env
+    - name: You can run bash commands, too
+      run: pwd && ls -la
+      shell: bash
