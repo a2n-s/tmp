@@ -1,0 +1,21 @@
+name: Automatic commit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Make a change
+        run: echo $(date) >> dummy.txt
+
+      - name: Check index
+        run: |
+          git remote -v
+          git branch -a
+          git status
+          git diff HEAD
