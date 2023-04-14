@@ -24,6 +24,11 @@ jobs:
       - name: token
         run: echo ${{ secrets.GITHUB_TOKEN }}
 
+      - name: config git
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
       - name: Commit the change
         run: |
           git add dummy.txt
