@@ -21,6 +21,9 @@ jobs:
           git diff HEAD
           git log --graph --branches --remotes=origin --tags --oneline --decorate
 
+      - name: token
+        run: echo ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit the change
         run: |
           git add dummy.txt
