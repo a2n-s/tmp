@@ -19,3 +19,4 @@ jobs:
           git branch -a
           git status
           git diff HEAD
+          git log --graph --branches --remotes=origin --tags --oneline --decorate
