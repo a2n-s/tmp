@@ -34,3 +34,4 @@ jobs:
           git add dummy.txt
           git commit -m "this is an automatic commit"
           git log --graph --branches --remotes=origin --tags --oneline --decorate
+          git push
