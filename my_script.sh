@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "PATH from script: $PATH"
-echo "message: $1"
+echo "PATH from script: $PATH"  
+echo "message: $1"  
